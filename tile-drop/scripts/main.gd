@@ -9,8 +9,13 @@ var number = 0
 var pos = 0
 
 func _ready() -> void:
-	pos = randi_range(100, 900)
+	#pos = randi_range(100, 900)
+	pass
+	
 	#rng()
+
+func _process(_delta: float) -> void:
+	tile.position = global_position + Vector2(pos, 50)
 
 func rng() -> void:
 	#number = randi_range(1, 10)
@@ -19,7 +24,7 @@ func rng() -> void:
 		var tile_1 = tile1.instantiate()
 		tile_1.global_position = global_position + Vector2 (pos, 50)
 		add_child(tile_1)
-		
-		
 
-	
+
+func _on_killzone_body_entered(_body: Node2D) -> void:
+	tile.hide()

@@ -31,7 +31,6 @@ func _process(_delta: float) -> void:
 	if sequenceDetect.size() == sequence.size():
 		checkSequence()
 	restart()
-	body.area_hit.connect(removeTile)
 	
 
 func _input(event: InputEvent):
@@ -67,6 +66,3 @@ func getSequence():
 func resetInput():
 	sequenceDetect.clear()
 	points = 0
-
-func removeTile():
-	queue_free()
