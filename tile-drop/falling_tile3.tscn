@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://yxs1i83xlwrn"]
-
-[node name="RigidBody2D" type="RigidBody2D" unique_id=1244997151]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=998846634]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=917703761]
