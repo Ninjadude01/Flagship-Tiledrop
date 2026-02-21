@@ -2,6 +2,20 @@
 
 [ext_resource type="Texture2D" uid="uid://dg32r7k8aukm8" path="res://assets/main background.png" id="1_elqb8"]
 [ext_resource type="Script" uid="uid://crw5d314rb7am" path="res://scripts/main.gd" id="1_rvslj"]
+[ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="3_0bbpv"]
+
+[sub_resource type="Theme" id="Theme_rarhs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcsgt"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Main" type="Node2D" unique_id=481155519]
 script = ExtResource("1_rvslj")
@@ -11,3 +25,24 @@ texture_filter = 1
 position = Vector2(575.5, 322)
 scale = Vector2(1.6434661, 0.92613643)
 texture = ExtResource("1_elqb8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1787297]
+
+[node name="ScorePanel" type="Panel" parent="CanvasLayer" unique_id=913874804]
+offset_left = 432.0
+offset_top = 3.0
+offset_right = 707.0924
+offset_bottom = 111.0
+theme = SubResource("Theme_rarhs")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vcsgt")
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/ScorePanel" unique_id=1516692202]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = 33.0
+offset_right = 252.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_0bbpv")
+theme_override_font_sizes/font_size = 35
+text = "Score: 999"
