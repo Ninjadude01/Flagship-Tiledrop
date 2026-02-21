@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://w2frerolpwmj"]
+
+[ext_resource type="Script" uid="uid://dwtv60sd4djox" path="res://scripts/tile_10.gd" id="1_28s8n"]
+[ext_resource type="Texture2D" uid="uid://c2hjf3hyxboit" path="res://assets/pattern 10.png" id="1_nhsnh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28s8n"]
+size = Vector2(200, 200)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=113837920]
+script = ExtResource("1_28s8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1105672413]
+texture_filter = 1
+position = Vector2(100.50001, 100.50001)
+scale = Vector2(0.14275569, 0.14275569)
+texture = ExtResource("1_nhsnh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=648256713]
+position = Vector2(101, 100)
+shape = SubResource("RectangleShape2D_28s8n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

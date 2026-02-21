@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c3y46vna5fcu8"]
+
+[ext_resource type="Script" uid="uid://djp1bhe6bah0d" path="res://scripts/tile_9.gd" id="1_jefun"]
+[ext_resource type="Texture2D" uid="uid://df5hrpyleoulb" path="res://assets/pattern 9.png" id="1_pnpcq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jefun"]
+size = Vector2(200, 200)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=113837920]
+script = ExtResource("1_jefun")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1105672413]
+texture_filter = 1
+position = Vector2(101, 101)
+scale = Vector2(0.14204547, 0.14204547)
+texture = ExtResource("1_pnpcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=648256713]
+position = Vector2(101, 100)
+shape = SubResource("RectangleShape2D_jefun")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
