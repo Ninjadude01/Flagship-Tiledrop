@@ -12,6 +12,9 @@ extends Node2D
 	"9":false
 }
 
+var keys = [1, 2, 3, 4, 5, 6 ,7 ,8 ,9]
+var keysPressed = 0
+
 var sequence = []
 var sequenceDetect = []
 var points = 0
@@ -24,12 +27,17 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if sequenceDetect.size() == sequence.size():
 		checkSequence()
+	restart()
 	
 
 func _input(event: InputEvent):
 	if event is InputEventKey and event.is_released():
-		#print(event.as_text())
 		sequenceDetect.append(event.as_text())
+
+func restart():
+	if Input.is_action_just_released("1") && Input.is_action_just_released("3") && Input.is_action_just_released("7") && Input.is_action_just_released("9"):
+		print("restart")
+		resetInput()
 
 func checkSequence(): #fix this
 	for i in range(sequence.size()):

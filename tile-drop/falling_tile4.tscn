@@ -5,14 +5,14 @@
 [node name="test_sequence" type="Node2D" unique_id=2088121190]
 script = ExtResource("1_0wyq5")
 keyDict = {
-"1": true,
-"2": false,
+"1": false,
+"2": true,
 "3": false,
 "4": true,
 "5": false,
-"6": false,
-"7": true,
-"8": false,
+"6": true,
+"7": false,
+"8": true,
 "9": false
 }
 
