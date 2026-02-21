@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://fnqnyqf53a14"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkk46"]
+size = Vector2(135, 119)
+
+[node name="FallingTile" type="RigidBody2D" unique_id=1622127063]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834025566]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1369437445]
+position = Vector2(141.5, 74.5)
+shape = SubResource("RectangleShape2D_rkk46")
