@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://802xk8ar7614"]
+
+[ext_resource type="Script" uid="uid://bjn52dm0d6a5r" path="res://test_sequence.gd" id="1_0wyq5"]
+
+[node name="test_sequence" type="Node2D" unique_id=2088121190]
+script = ExtResource("1_0wyq5")
+keyDict = {
+"r1c1": true,
+"r1c2": true,
+"r1c3": true,
+"r2c1": false,
+"r2c2": false,
+"r2c3": false,
+"r3c1": false,
+"r3c2": false,
+"r3c3": false
+}
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1964448503]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=972124656]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1696452696]
