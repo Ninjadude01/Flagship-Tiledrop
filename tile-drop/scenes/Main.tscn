@@ -2,10 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dg32r7k8aukm8" path="res://assets/main background.png" id="1_elqb8"]
 [ext_resource type="Script" uid="uid://crw5d314rb7am" path="res://scripts/main.gd" id="1_rvslj"]
-[ext_resource type="Script" uid="uid://b1bmfrd0lnora" path="res://scripts/Bottom.gd" id="3_0bbpv"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_elqb8"]
-size = Vector2(1143, 96)
 
 [node name="Main" type="Node2D" unique_id=481155519]
 script = ExtResource("1_rvslj")
@@ -15,10 +11,3 @@ texture_filter = 1
 position = Vector2(575.5, 322)
 scale = Vector2(1.6434661, 0.92613643)
 texture = ExtResource("1_elqb8")
-
-[node name="Bottom" type="Area2D" parent="." unique_id=86620945]
-script = ExtResource("3_0bbpv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom" unique_id=1737258141]
-position = Vector2(578.5, 597)
-shape = SubResource("RectangleShape2D_elqb8")

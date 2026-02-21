@@ -21,7 +21,7 @@ func rng() -> void:
 
 	number = randi_range(1, 10)
 	number2 = randi_range(1, 1000)
-	
+	number = 1
 	if (number == 1):
 		var tile_1 = tile1.instantiate()
 		tile_1.global_position = global_position + Vector2 (number2, 0)
@@ -72,3 +72,5 @@ func rng() -> void:
 		tile_10.global_position = global_position + Vector2 (number2, 0)
 		add_child(tile_10)
 		
+
+	
