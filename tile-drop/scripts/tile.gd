@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var body: RigidBody2D = $RigidBody2D
+
 @export var keyDict = {
 	"1":false,
 	"2":false,
@@ -21,6 +23,7 @@ var points = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	body.linear_velocity = Vector2(0, 400)
 	setSequence()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,6 +31,7 @@ func _process(_delta: float) -> void:
 	if sequenceDetect.size() == sequence.size():
 		checkSequence()
 	restart()
+	body.area_hit.connect(removeTile)
 	
 
 func _input(event: InputEvent):
@@ -63,4 +67,6 @@ func getSequence():
 func resetInput():
 	sequenceDetect.clear()
 	points = 0
-		
+
+func removeTile():
+	queue_free()

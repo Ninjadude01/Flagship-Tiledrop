@@ -4,9 +4,6 @@
 [ext_resource type="Script" uid="uid://crw5d314rb7am" path="res://scripts/main.gd" id="1_rvslj"]
 [ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="3_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://brw8c6pb78n2o" path="res://scenes/killzone.tscn" id="4_rarhs"]
-[ext_resource type="PackedScene" uid="uid://cq3wncjwineeq" path="res://scenes/tile.tscn" id="5_c01mt"]
-[ext_resource type="Script" uid="uid://bjn52dm0d6a5r" path="res://scripts/tile.gd" id="6_jlsqs"]
-[ext_resource type="Texture2D" uid="uid://b1ge3bxpmawt4" path="res://assets/pattern 1.png" id="6_nxtc6"]
 
 [sub_resource type="Theme" id="Theme_rarhs"]
 
@@ -53,12 +50,3 @@ text = "Score: 999"
 
 [node name="killzone" parent="." unique_id=503538498 instance=ExtResource("4_rarhs")]
 position = Vector2(569, 626)
-
-[node name="Tile" parent="." unique_id=749705110 instance=ExtResource("5_c01mt")]
-script = ExtResource("6_jlsqs")
-
-[node name="Sprite2D" type="Sprite2D" parent="Tile" unique_id=1040035752]
-texture_filter = 1
-position = Vector2(-1, 0)
-scale = Vector2(0.14169033, 0.14169033)
-texture = ExtResource("6_nxtc6")

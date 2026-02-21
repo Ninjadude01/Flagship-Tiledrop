@@ -7,6 +7,7 @@
 size = Vector2(200, 200)
 
 [node name="FallingTile" type="RigidBody2D" unique_id=1622127063]
+collision_layer = 2
 script = ExtResource("1_qtn7a")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834025566]

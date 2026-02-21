@@ -63,6 +63,11 @@ config/icon="res://assets/icon.svg"
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="killzone"
+2d_physics/layer_2="tiles"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
