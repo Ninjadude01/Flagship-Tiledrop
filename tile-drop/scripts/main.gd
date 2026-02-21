@@ -18,7 +18,7 @@ func _ready() -> void:
 	rng()
 
 func rng() -> void:
-	
+
 	number = randi_range(1, 10)
 	number2 = randi_range(1, 1000)
 	
