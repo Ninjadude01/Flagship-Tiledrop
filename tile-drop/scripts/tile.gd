@@ -32,7 +32,6 @@ var keyDict2 = {
 
 var keys = [1, 2, 3, 4, 5, 6 ,7 ,8 ,9]
 var keysPressed = 0
-
 var sequence = []
 var sequenceDetect = []
 var points = 0
@@ -42,12 +41,13 @@ var texture = Texture
 func _ready():
 	genRandTexture()
 	sprite.texture = texture
-	body.linear_velocity = Vector2(0, 400)
+	body.linear_velocity = Vector2(0, 200)
 	setSequence()
 	
 func genRandTexture():
 	textNum = randi_range(1, 10)
 	texture = load("res://assets/" + str(textNum) + "old.png")
+
 
 func _process(_delta: float) -> void: #bug thingy
 	if checkSequence():
@@ -62,7 +62,7 @@ func _process(_delta: float) -> void: #bug thingy
 		queue_free()
 		resetInput()
 		nextTile.emit()
-
+	
 func _input(event: InputEvent):
 	if event is InputEventKey and event.is_released():
 		sequenceDetect.append(event.as_text())

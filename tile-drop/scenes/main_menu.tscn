@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cii406irlgjdp"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://dwuv0y5l07sft" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://br4v7f668p24x" path="res://assets/main menu 2.png" id="2_bqqt6"]
 
@@ -58,7 +58,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.49803922, 0.5176471, 1, 1)
 theme_override_colors/font_focus_color = Color(0.49803922, 0.5176471, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.4650038, 0.89291877, 0.8408239, 1)
+theme_override_colors/font_hover_color = Color(0.46666667, 0.89411765, 0.8392157, 1)
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")

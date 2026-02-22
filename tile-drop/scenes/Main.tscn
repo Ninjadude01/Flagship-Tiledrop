@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="3_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://brw8c6pb78n2o" path="res://scenes/killzone.tscn" id="4_rarhs"]
 [ext_resource type="PackedScene" uid="uid://cq3wncjwineeq" path="res://scenes/tile.tscn" id="5_c01mt"]
+[ext_resource type="PackedScene" uid="uid://0skfly7okqd" path="res://scenes/deaths.tscn" id="6_c01mt"]
 
 [sub_resource type="Theme" id="Theme_rarhs"]
 
@@ -32,10 +33,10 @@ texture = ExtResource("2_vcsgt")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1787297]
 
 [node name="ScorePanel" type="Panel" parent="CanvasLayer" unique_id=913874804]
-offset_left = 460.0
-offset_top = 3.0
-offset_right = 735.0924
-offset_bottom = 111.0
+offset_left = 576.0
+offset_top = 2.0
+offset_right = 851.0924
+offset_bottom = 110.0
 theme = SubResource("Theme_rarhs")
 theme_override_styles/panel = SubResource("StyleBoxFlat_vcsgt")
 
@@ -48,7 +49,23 @@ offset_right = 252.0
 offset_bottom = 79.0
 theme_override_fonts/font = ExtResource("3_0bbpv")
 theme_override_font_sizes/font_size = 35
-text = "Score: 00"
+text = "Score: 0"
+
+[node name="DeathPanel" type="Panel" parent="CanvasLayer" unique_id=1648933110]
+offset_left = 304.0
+offset_right = 572.0
+offset_bottom = 109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vcsgt")
+
+[node name="DeathLabel" type="Label" parent="CanvasLayer/DeathPanel" unique_id=908086749]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 31.0
+offset_right = 222.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("3_0bbpv")
+theme_override_font_sizes/font_size = 40
+text = "Lives: 3"
 
 [node name="killzone" parent="." unique_id=1923447534 instance=ExtResource("4_rarhs")]
 position = Vector2(579, 626)
@@ -66,6 +83,9 @@ keyDict = {
 "8": false,
 "9": false
 }
+
+[node name="Deaths" parent="." unique_id=1146911908 instance=ExtResource("6_c01mt")]
+position = Vector2(52, 44)
 
 [connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
 [connection signal="nextTile" from="Tile" to="." method="_on_tile_next_tile"]
