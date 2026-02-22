@@ -36,8 +36,16 @@ func _process(_delta: float):
 func _on_killzone_body_entered(_body: Node2D) -> void:
 	Globals.lives -= 1
 	print(Globals.lives)
-	tile.hide()
-	get_tree().call_deferred("reload_current_scene")
+	if (Globals.lives == 0):
+		call_deferred("changedeath")
+		
+	else:
+		tile.hide()
+		get_tree().call_deferred("reload_current_scene")
 
 func _on_tile_next_tile() -> void:
 	get_tree().reload_current_scene()
+	
+func changedeath() ->void:
+	get_tree().change_scene_to_file("res://scenes/deathscreen.tscn")
+	
