@@ -11,6 +11,8 @@ var pos = 100
 
 func _ready() -> void:
 	setTile()
+	score.text = "Score: "
+	death_label.text = "Lives: "
 
 func setTile():
 	pos = randi_range(100, 900)

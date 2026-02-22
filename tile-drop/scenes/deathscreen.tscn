@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://ceaou28srjw7i"]
 
+[ext_resource type="Script" uid="uid://djv6gyjxwesq" path="res://scripts/deathscreen.gd" id="1_eye5d"]
 [ext_resource type="Texture2D" uid="uid://br4v7f668p24x" path="res://assets/main menu 2.png" id="1_uurjc"]
 [ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="2_eye5d"]
-[ext_resource type="Script" uid="uid://emmykm3b14sa" path="res://scripts/button.gd" id="3_eye5d"]
-[ext_resource type="Script" uid="uid://7ojnlmwo2nbo" path="res://scripts/button_2.gd" id="3_hgqth"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hgqth"]
 texture = ExtResource("1_uurjc")
@@ -74,13 +73,14 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[node name="Control" type="Control" unique_id=425553452]
+[node name="deathscreen" type="Control" unique_id=425553452]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eye5d")
 
 [node name="Panel" type="Panel" parent="." unique_id=986374707]
 layout_mode = 1
@@ -125,7 +125,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1818166935]
+[node name="playAgain" type="Button" parent="VBoxContainer" unique_id=1818166935]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.49803922, 0.5176471, 1, 1)
 theme_override_colors/font_focus_color = Color(0.49803922, 0.5176471, 1, 1)
@@ -137,9 +137,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ke8wd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_t1dl8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_l1dwg")
 text = "Play again"
-script = ExtResource("3_hgqth")
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1370534150]
+[node name="mainMenu" type="Button" parent="VBoxContainer" unique_id=1370534150]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.49803922, 0.5176471, 1, 1)
 theme_override_colors/font_focus_color = Color(0.49803922, 0.5176471, 1, 1)
@@ -151,7 +150,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_uurjc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_eye5d")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hgqth")
 text = "Back to Main Menu"
-script = ExtResource("3_eye5d")
 
-[connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/playAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="VBoxContainer/mainMenu" to="." method="_on_main_menu_pressed"]

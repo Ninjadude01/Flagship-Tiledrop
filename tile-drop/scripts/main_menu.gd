@@ -4,7 +4,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://start_timer.tscn")
+	get_tree().change_scene_to_file("res://scenes/start_timer.tscn")
 	
 func _on_howtoplay_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes//howtoplay.tscn")
