@@ -416,7 +416,7 @@ shape = SubResource("RectangleShape2D_uiyn6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=594401133]
 scale = Vector2(0.14, 0.14)
 sprite_frames = SubResource("SpriteFrames_gtpg2")
-animation = &"pattern 10"
+animation = &"pattern 1"
 autoplay = "pattern 1"
 
 [node name="Rightsound" type="AudioStreamPlayer2D" parent="." unique_id=1907937790]
