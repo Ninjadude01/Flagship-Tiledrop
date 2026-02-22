@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://dqlimgs8yjlem" path="res://scenes/howtoplay.gd" id="1_25cri"]
 [ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="1_hsfox"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13vul"]
-bg_color = Color(0.54509807, 0.5372549, 0.9843137, 1)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_25cri"]
+load_path = "res://.godot/imported/main menu 2.png-015744b6dd3944e393fb37df350908e0.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffhry"]
+texture = SubResource("CompressedTexture2D_25cri")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsfox"]
 bg_color = Color(0.37254903, 0.21176471, 0.5921569, 0.50980395)
@@ -66,7 +69,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_13vul")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ffhry")
 
 [node name="Button" type="Button" parent="." unique_id=1011275307]
 texture_filter = 1
@@ -83,9 +86,9 @@ offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.68235296, 0.88235295, 0.9019608, 1)
+theme_override_colors/font_color = Color(0.6117647, 0.93333334, 0.9137255, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.91764706, 0.80784315, 0.08235294, 1)
+theme_override_colors/font_hover_color = Color(0.46666667, 0.89411765, 0.8392157, 1)
 theme_override_fonts/font = ExtResource("1_hsfox")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_hsfox")
@@ -105,7 +108,7 @@ offset_top = 66.0
 offset_right = 481.0
 offset_bottom = 132.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.68235296, 0.88235295, 0.9019608, 1)
+theme_override_colors/font_color = Color(0.61128765, 0.9322188, 0.9143921, 1)
 theme_override_fonts/font = ExtResource("1_hsfox")
 theme_override_font_sizes/font_size = 60
 text = "How to Play Cosmic Drop:"
@@ -124,7 +127,7 @@ offset_right = 360.5
 offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.68235296, 0.88235295, 0.9019608, 1)
+theme_override_colors/font_color = Color(0.6117647, 0.93333334, 0.9137255, 1)
 theme_override_fonts/font = ExtResource("1_hsfox")
 theme_override_font_sizes/font_size = 35
 text = "A random sequence of tiles 

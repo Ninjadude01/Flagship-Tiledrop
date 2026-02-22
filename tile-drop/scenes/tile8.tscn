@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2jtqte846k4d"]
 
-[ext_resource type="Texture2D" uid="uid://ciii1itcmp4mj" path="res://assets/pattern 8.png" id="1_cjlv8"]
+[ext_resource type="Texture2D" uid="uid://ciii1itcmp4mj" path="res://assets/8old.png" id="1_cjlv8"]
 [ext_resource type="Script" uid="uid://dfh588n7f2lv0" path="res://scripts/tile_8.gd" id="1_fchr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fchr7"]
