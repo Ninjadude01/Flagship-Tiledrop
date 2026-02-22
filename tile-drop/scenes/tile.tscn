@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c8x5yr6s8ed2d" path="res://assets/pattern 7.png" id="9_lf0mp"]
 [ext_resource type="Texture2D" uid="uid://dslxfjjjywtsh" path="res://assets/pattern 8.png" id="10_ufjw7"]
 [ext_resource type="Texture2D" uid="uid://b0ujjm5tlxd5d" path="res://assets/pattern 9.png" id="11_3ngql"]
+[ext_resource type="AudioStream" uid="uid://dpwee3cxf4ger" path="res://assets/right sound.mp3" id="12_jm5cm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uiyn6"]
 size = Vector2(200, 200)
@@ -417,3 +418,7 @@ scale = Vector2(0.14, 0.14)
 sprite_frames = SubResource("SpriteFrames_gtpg2")
 animation = &"pattern 10"
 autoplay = "pattern 1"
+
+[node name="Rightsound" type="AudioStreamPlayer2D" parent="." unique_id=1907937790]
+stream = ExtResource("12_jm5cm")
+volume_db = 10.0

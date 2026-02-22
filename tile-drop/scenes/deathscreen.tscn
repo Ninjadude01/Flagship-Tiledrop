@@ -7,39 +7,6 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hgqth"]
 texture = ExtResource("1_uurjc")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ke8wd"]
-bg_color = Color(0.37254903, 0.21176471, 0.5921569, 0.50980395)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1dl8"]
-bg_color = Color(0.37254903, 0.21176471, 0.5921569, 0.50980395)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1dwg"]
-bg_color = Color(0.37254903, 0.21176471, 0.5921569, 0.50980395)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uurjc"]
 bg_color = Color(0.37254903, 0.21176471, 0.5921569, 0.50980395)
 border_width_left = 5
@@ -118,26 +85,12 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -294.0411
-offset_top = -278.0
+offset_top = -247.0
 offset_right = 294.04114
-offset_bottom = -116.0
+offset_bottom = -161.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 20
-
-[node name="playAgain" type="Button" parent="VBoxContainer" unique_id=1818166935]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.49803922, 0.5176471, 1, 1)
-theme_override_colors/font_focus_color = Color(0.49803922, 0.5176471, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.46666667, 0.89411765, 0.8392157, 1)
-theme_override_fonts/font = ExtResource("2_eye5d")
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_ke8wd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_t1dl8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_l1dwg")
-text = "Play again"
 
 [node name="mainMenu" type="Button" parent="VBoxContainer" unique_id=1370534150]
 layout_mode = 2
@@ -153,5 +106,4 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_eye5d")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hgqth")
 text = "Back to Main Menu"
 
-[connection signal="pressed" from="VBoxContainer/playAgain" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="VBoxContainer/mainMenu" to="." method="_on_main_menu_pressed"]

@@ -3,6 +3,7 @@ extends Node2D
 @onready var body: RigidBody2D = $RigidBody2D
 #@onready var sprite: Sprite2D = $RigidBody2D/Sprite2D
 @onready var animated_sprite: AnimatedSprite2D = $RigidBody2D/AnimatedSprite2D
+@onready var rightsound: AudioStreamPlayer2D = $Rightsound
 
 signal nextTile
 
@@ -73,7 +74,7 @@ func _input(event: InputEvent):
 		sequenceDetect.append(event.as_text())
 
 func restart():
-	if Input.is_action_just_released("1") && Input.is_action_just_released("3") && Input.is_action_just_released("7") && Input.is_action_just_released("9"):
+	if Input.is_action_just_released("8") && Input.is_action_just_released("9"):
 		print("restart")
 		resetInput()
 
@@ -83,6 +84,7 @@ func checkSequence():
 			if sequenceDetect[i] == sequence[i]:
 				points += 1
 		if points == sequence.size():
+			rightsound.play()
 			print("Correct Sequence")
 			getSequence()
 			return true

@@ -10,7 +10,7 @@
 [sub_resource type="Theme" id="Theme_rarhs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcsgt"]
-bg_color = Color(0.42705488, 0.63281953, 0.7340435, 1)
+bg_color = Color(0.32058316, 0.47933406, 0.5587095, 0.27058825)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -23,6 +23,7 @@ corner_radius_bottom_left = 30
 
 [node name="Main" type="Node2D" unique_id=481155519]
 script = ExtResource("1_rvslj")
+metadata/_edit_horizontal_guides_ = [-564.0]
 
 [node name="TextureRect" type="Sprite2D" parent="." unique_id=294138329]
 texture_filter = 1
