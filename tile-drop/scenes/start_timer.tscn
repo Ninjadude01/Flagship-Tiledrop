@@ -63,5 +63,5 @@ text = "3"
 
 [node name="timer2" type="Timer" parent="." unique_id=985564138]
 
-[connection signal="timeout" from="countdown" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="countdown" to="." method="_on_countdown_timeout"]
 [connection signal="timeout" from="timer2" to="." method="_on_timer_2_timeout"]

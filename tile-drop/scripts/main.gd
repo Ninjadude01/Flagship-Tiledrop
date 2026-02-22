@@ -21,9 +21,7 @@ func _process(_delta: float):
 	tile.position = global_position + Vector2(pos, 50)
 	score.text = "Score: " + str(Globals.points)
 	death_label.text = "Lives: " + str(Globals.lives)
-	if Globals.lives == 0:
-		get_tree().quit()
-
+	
 	
 
 #func rng() -> void:

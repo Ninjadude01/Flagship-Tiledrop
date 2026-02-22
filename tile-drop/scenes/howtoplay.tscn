@@ -80,9 +80,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -191.0
-offset_top = 121.0
+offset_top = 136.0
 offset_right = 187.0
-offset_bottom = 225.0
+offset_bottom = 240.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -121,17 +121,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -360.5
-offset_top = -88.5
-offset_right = 360.5
-offset_bottom = 46.5
+offset_left = -474.25
+offset_top = -124.5
+offset_right = 474.25
+offset_bottom = 124.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.6117647, 0.93333334, 0.9137255, 1)
 theme_override_fonts/font = ExtResource("1_hsfox")
-theme_override_font_sizes/font_size = 35
-text = "A random sequence of tiles 
-will fall, and you must press 
-them in order from left to right"
+theme_override_font_sizes/font_size = 30
+text = "Use the keypad to input the sequences and eliminate the falling tiles!
+
+Sequences must be entered in numerical order (1-9, left to right, top to bottom)
+
+If you enter a sequence wrong, press 8 & 9 at the same time to reset
+"
+autowrap_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
