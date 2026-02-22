@@ -1,7 +1,8 @@
 extends Node2D
 
 @onready var body: RigidBody2D = $RigidBody2D
-@onready var sprite: Sprite2D = $RigidBody2D/Sprite2D
+#@onready var sprite: Sprite2D = $RigidBody2D/Sprite2D
+@onready var animated_sprite: AnimatedSprite2D = $RigidBody2D/AnimatedSprite2D
 
 signal nextTile
 
@@ -38,16 +39,19 @@ var sequenceDetect = []
 var points = 0
 var textNum = 0
 var texture = Texture
+var animation = ""
 
 func _ready():
 	genRandTexture()
-	sprite.texture = texture
-	body.linear_velocity = Vector2(0, 400)
+	animated_sprite.play(animation)
+	#sprite.texture = texture
+	body.linear_velocity = Vector2(0, 100)
 	setSequence()
 	
 func genRandTexture():
 	textNum = randi_range(1, 10)
-	texture = load("res://assets/" + str(textNum) + "old.png")
+	animation = "pattern " + str(textNum)
+	#texture = load("res://assets/" + str(textNum) + "old.png")
 
 func _process(_delta: float) -> void: #bug thingy
 	if checkSequence():

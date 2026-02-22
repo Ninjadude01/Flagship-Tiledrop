@@ -16,6 +16,7 @@ func setTile():
 func _process(_delta: float):
 	tile.position = global_position + Vector2(pos, 50)
 	score.text = "Score: " + str(Globals.points)
+
 	
 
 #func rng() -> void:

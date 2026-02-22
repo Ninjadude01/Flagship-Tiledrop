@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cii406irlgjdp"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://dwuv0y5l07sft" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://br4v7f668p24x" path="res://assets/main menu 2.png" id="2_bqqt6"]
 
