@@ -44,7 +44,7 @@ func _ready():
 	genRandTexture()
 	animated_sprite.play(animation)
 	#sprite.texture = texture
-	body.linear_velocity = Vector2(0, 100)
+	body.linear_velocity = Vector2(0, Globals.startSpeed)
 	setSequence()
 	
 func genRandTexture():
@@ -56,6 +56,7 @@ func genRandTexture():
 func _process(_delta: float) -> void: #bug thingy
 	if checkSequence():
 		Globals.points += 5
+		Globals.increaseSpeed()
 		print("Points Earned: " + str(Globals.points))
 		queue_free()
 		resetInput()

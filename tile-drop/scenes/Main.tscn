@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="3_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://brw8c6pb78n2o" path="res://scenes/killzone.tscn" id="4_rarhs"]
 [ext_resource type="PackedScene" uid="uid://cq3wncjwineeq" path="res://scenes/tile.tscn" id="5_c01mt"]
-[ext_resource type="PackedScene" uid="uid://0skfly7okqd" path="res://scenes/deaths.tscn" id="6_c01mt"]
+[ext_resource type="PackedScene" path="res://scenes/deaths.tscn" id="6_c01mt"]
 
 [sub_resource type="Theme" id="Theme_rarhs"]
 
