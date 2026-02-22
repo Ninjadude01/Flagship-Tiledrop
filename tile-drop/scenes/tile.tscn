@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cq3wncjwineeq"]
 
 [ext_resource type="Script" uid="uid://bjn52dm0d6a5r" path="res://scripts/tile.gd" id="1_3dk36"]
+[ext_resource type="Texture2D" uid="uid://b1ge3bxpmawt4" path="res://assets/pattern 1.png" id="2_ywnoi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uiyn6"]
 size = Vector2(200, 200)
@@ -12,3 +13,9 @@ script = ExtResource("1_3dk36")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=2099206007]
 shape = SubResource("RectangleShape2D_uiyn6")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1216976318]
+texture_filter = 1
+position = Vector2(-1, 0)
+scale = Vector2(0.14169033, 0.14169033)
+texture = ExtResource("2_ywnoi")

@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://c2lxntdnoebo7" path="res://assets/Starbim.ttf" id="3_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://brw8c6pb78n2o" path="res://scenes/killzone.tscn" id="4_rarhs"]
 [ext_resource type="PackedScene" uid="uid://cq3wncjwineeq" path="res://scenes/tile.tscn" id="5_c01mt"]
+[ext_resource type="Texture2D" uid="uid://b1ge3bxpmawt4" path="res://assets/pattern 1.png" id="6_nxtc6"]
 
 [sub_resource type="Theme" id="Theme_rarhs"]
 
@@ -50,21 +51,15 @@ theme_override_font_sizes/font_size = 35
 text = "Score: 999"
 
 [node name="killzone" parent="." unique_id=1923447534 instance=ExtResource("4_rarhs")]
-position = Vector2(579, 626)
+position = Vector2(575, 554)
 
 [node name="Tile" parent="." unique_id=749705110 instance=ExtResource("5_c01mt")]
 position = Vector2(241, 201)
-keyDict = {
-"1": true,
-"2": true,
-"3": true,
-"4": false,
-"5": false,
-"6": false,
-"7": false,
-"8": false,
-"9": false
-}
+
+[node name="Sprite2D" type="Sprite2D" parent="Tile" unique_id=1040035752]
+texture_filter = 1
+position = Vector2(-1, 0)
+scale = Vector2(0.14169033, 0.14169033)
+texture = ExtResource("6_nxtc6")
 
 [connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
-[connection signal="nextTile" from="Tile" to="." method="_on_tile_next_tile"]
