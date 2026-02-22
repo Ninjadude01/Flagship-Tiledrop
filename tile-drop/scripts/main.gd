@@ -7,8 +7,11 @@ var number = 0
 var pos = 100
 
 func _ready() -> void:
-	pos = randi_range(100, 900)
+	setTile()
 	##rng()
+
+func setTile():
+	pos = randi_range(100, 900)
 
 func _process(_delta: float):
 	tile.position = global_position + Vector2(pos, 50)
@@ -26,7 +29,7 @@ func _process(_delta: float):
 
 func _on_killzone_body_entered(_body: Node2D) -> void:
 	tile.hide()
-
+	get_tree().call_deferred("reload_current_scene")
 
 func _on_tile_next_tile() -> void:
-	pass # Replace with function body.
+	get_tree().reload_current_scene()
