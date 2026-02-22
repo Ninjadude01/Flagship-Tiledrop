@@ -58,6 +58,9 @@ func _process(_delta: float) -> void: #bug thingy
 		Globals.points += 5
 		Globals.increaseSpeed()
 		print("Points Earned: " + str(Globals.points))
+		animated_sprite.play("popping animation")
+		while animated_sprite.is_playing():
+			print("wait for for animation to finish")
 		queue_free()
 		resetInput()
 		nextTile.emit()

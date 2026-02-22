@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c8x5yr6s8ed2d" path="res://assets/pattern 7.png" id="9_lf0mp"]
 [ext_resource type="Texture2D" uid="uid://dslxfjjjywtsh" path="res://assets/pattern 8.png" id="10_ufjw7"]
 [ext_resource type="Texture2D" uid="uid://b0ujjm5tlxd5d" path="res://assets/pattern 9.png" id="11_3ngql"]
+[ext_resource type="Texture2D" uid="uid://b7s8h4ds5w5kx" path="res://assets/poping animation.png" id="12_jm5cm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uiyn6"]
 size = Vector2(200, 200)
@@ -207,6 +208,42 @@ region = Rect2(0, 2816, 1408, 1408)
 atlas = ExtResource("11_3ngql")
 region = Rect2(1408, 2816, 1408, 1408)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vknvr"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(0, 0, 1188, 1188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdkp0"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(1188, 0, 1188, 1188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8xw3"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(2376, 0, 1188, 1188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkxpj"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(0, 1188, 1188, 1188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf0mp"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(1188, 1188, 1188, 1188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufjw7"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(2376, 1188, 1188, 1188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ngql"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(0, 2376, 1188, 1188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc43y"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(1188, 2376, 1188, 1188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb8gu"]
+atlas = ExtResource("12_jm5cm")
+region = Rect2(2376, 2376, 1188, 1188)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_gtpg2"]
 animations = [{
 "frames": [{
@@ -402,6 +439,38 @@ animations = [{
 "loop": true,
 "name": &"pattern 9",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vknvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdkp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8xw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkxpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf0mp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufjw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ngql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc43y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb8gu")
+}],
+"loop": false,
+"name": &"popping animation",
+"speed": 10.0
 }]
 
 [node name="Tile" type="Node2D" unique_id=749705110]
@@ -415,5 +484,5 @@ shape = SubResource("RectangleShape2D_uiyn6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=594401133]
 scale = Vector2(0.14, 0.14)
 sprite_frames = SubResource("SpriteFrames_gtpg2")
-animation = &"pattern 10"
+animation = &"popping animation"
 autoplay = "pattern 1"
