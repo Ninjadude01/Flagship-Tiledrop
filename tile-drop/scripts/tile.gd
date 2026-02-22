@@ -47,7 +47,7 @@ func _ready():
 	
 func genRandTexture():
 	textNum = randi_range(1, 10)
-	texture = load("res://assets/pattern " + str(textNum) + ".png")
+	texture = load("res://assets/" + str(textNum) + "old.png")
 
 func _process(_delta: float) -> void: #bug thingy
 	if checkSequence():

@@ -32,9 +32,9 @@ texture = ExtResource("2_vcsgt")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1787297]
 
 [node name="ScorePanel" type="Panel" parent="CanvasLayer" unique_id=913874804]
-offset_left = 432.0
+offset_left = 460.0
 offset_top = 3.0
-offset_right = 707.0924
+offset_right = 735.0924
 offset_bottom = 111.0
 theme = SubResource("Theme_rarhs")
 theme_override_styles/panel = SubResource("StyleBoxFlat_vcsgt")
@@ -48,7 +48,7 @@ offset_right = 252.0
 offset_bottom = 79.0
 theme_override_fonts/font = ExtResource("3_0bbpv")
 theme_override_font_sizes/font_size = 35
-text = "Score: 0"
+text = "Score: 00"
 
 [node name="killzone" parent="." unique_id=1923447534 instance=ExtResource("4_rarhs")]
 position = Vector2(579, 626)
